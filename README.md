@@ -53,7 +53,7 @@ From here, your server is running and ready to serve all files placed in the ser
 ## CGI and such
 
 If it's necessary to process some files in a special way, you can use delegate to **OnSpecialFileType** and take the control over processing.
-Next piece of code handles file with .cgi extension. It takes the content of the file and replace <%=RESULT%> pattern with parameter _userName_ passed in the query string. In case that you will call following URL **http://127.0.0.1/form.cgi?userNamer=Joshua** the <%=RESULT%> pattern will be replaced with _Joshua_.
+Next piece of code handles file with .cgi extension. It takes the content of the file and replace <%=RESULT%> pattern with parameter _userName_ passed in the query string. In case that you will call following URL `http://127.0.0.1/form.cgi?userNamer=Joshua` the <%=RESULT%> pattern will be replaced with _Joshua_.
 
 ```csharp
 void webServer_OnSpecialFileType(CompactWeb.WebRequest webRequest, out IO.Stream outputStream)
